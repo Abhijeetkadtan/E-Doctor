@@ -1,0 +1,175 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Sign Up - E-doctor</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>Doctors Registration - Sign Up</h1>
+		</div>
+		<form th:action="@{/process_register}" th:object="${user}" 
+			method="post" style="max-width: 600px; margin: 0 auto;">
+		<div class="m-3">
+			<div class="form-group row">
+				<label class="col-4 col-form-label">E-mail: </label>
+				<div class="col-8">
+					<input type="email" th:field="*{email}" class="form-control" required />
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Password: </label>
+				<div class="col-8">
+					<input type="password" th:field="*{password}" class="form-control" 
+							required minlength="6" maxlength="10"/>
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label class="col-4 col-form-label">First Name: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{firstName}" class="form-control" 
+							required minlength="2" maxlength="20"/>
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Last Name: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{lastName}" class="form-control" 
+							required minlength="2" maxlength="20" />
+				</div>
+			</div>
+			
+			<div>
+				<button type="submit" class="btn btn-primary">Sign Up</button> 
+			</div>
+		</div>
+		</form>
+	</div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Sign Up - E-doctor</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        /* Set background to the doctor image */
+        body {
+            background: url('https://acsonnet.com/wp-content/uploads/2021/05/hospital-management.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333333;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .form-control {
+            animation: fadeInUp 1.2s ease;
+        }
+
+        button {
+            animation: fadeInUp 1.2s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <div>
+            <h1>Doctors Registration - Sign Up</h1>
+        </div>
+        <form th:action="@{/process_register}" th:object="${user}" method="post" style="max-width: 600px; margin: 0 auto;">
+            <div class="m-3">
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">E-mail: </label>
+                    <div class="col-8">
+                        <input type="email" th:field="*{email}" class="form-control" required />
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Password: </label>
+                    <div class="col-8">
+                        <input type="password" th:field="*{password}" class="form-control" required minlength="6" maxlength="10" />
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">First Name: </label>
+                    <div class="col-8">
+                        <input type="text" th:field="*{firstName}" class="form-control" required minlength="2" maxlength="20" />
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Last Name: </label>
+                    <div class="col-8">
+                        <input type="text" th:field="*{lastName}" class="form-control" required minlength="2" maxlength="20" />
+                    </div>
+                </div>
+                
+                <div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

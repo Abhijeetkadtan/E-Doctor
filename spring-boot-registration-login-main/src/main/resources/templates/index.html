@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Welcome toE-doctor  Home</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container text-center">
+		<h1>Welcome to E-Doctor</h1>
+		<h3><a th:href="@{/users}">List of Users</a></h3>
+		<h3><a th:href="@{/register}">Register</a></h3>
+		<h3><a th:href="@{/login}">Login</a></h3>
+	</div>
+	
+</body>
+</html> -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Welcome to E-Doctor Home</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        /* Set the background to the external image */
+        body {
+            background: url('https://acsonnet.com/wp-content/uploads/2021/05/hospital-management.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: rgba(173, 216, 230, 0.9); /* Semi-transparent background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease;
+        }
+
+        h3 a {
+            display: inline-block;
+            color: #333333;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 10px 0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        h3 a:hover {
+            background-color: #007bff;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Welcome to E-Doctor</h1>
+        <h3><a th:href="@{/users}">List of Users</a></h3>
+        <h3><a th:href="@{/register}">Register</a></h3>
+        <h3><a th:href="@{/login}">Login</a></h3>
+    </div>
+</body>
+</html>
